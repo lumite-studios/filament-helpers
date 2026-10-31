@@ -1,0 +1,27 @@
+{
+    "name": "lumite-studios/filament-settings-page",
+    "description": "A basic settings page for filament.",
+    "version": "dev-main",
+    "authors": [
+        {
+            "name": "crotanite",
+            "email": "crotanite@lumitestudios.com"
+        }
+    ],
+    "require": {
+        "filament/filament": "^5.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "LumiteStudios\\FilamentSettingsPage\\": "src/"
+        }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.32"
+    },
+    "scripts": {
+        "pint": [
+            "pint"
+        ]
+    }
+}
