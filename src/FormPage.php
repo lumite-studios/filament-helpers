@@ -1,6 +1,6 @@
 <?php
 
-namespace LumiteStudios\FilamentSettingsPage;
+namespace LumiteStudios\FilamentHelpers;
 
 use Filament\Actions\Action;
 use Filament\Pages\Page;
@@ -10,7 +10,7 @@ use Filament\Schemas\Components\Form;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 
-abstract class SettingsPage extends Page
+abstract class FormPage extends Page
 {
     abstract protected function fillForm(): void;
 
@@ -19,8 +19,6 @@ abstract class SettingsPage extends Page
     abstract public function save(): void;
 
     public ?array $data = [];
-
-    protected static string|\BackedEnum|null $navigationIcon = Heroicon::OutlinedCog6Tooth;
 
     public function mount(): void
     {
