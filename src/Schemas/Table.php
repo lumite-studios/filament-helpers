@@ -11,6 +11,6 @@ class Table
     {
         return Tables\Columns\TextColumn::make('email')
             ->label('Email')
-            ->formatStateUsing(fn ($state): string => Str::obscureEmail($state));
+            ->formatStateUsing(fn ($state): string => Str::replaceMatches('/(?!^).(?=[^@]+@)/', fn ($matches) => '*', $state));
     }
 }
